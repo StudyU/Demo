@@ -1,0 +1,4 @@
+﻿  main.cpp
+f:\c++\testcode\testcode\teststring.h(33): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  TestCode.vcxproj -> F:\C++\TestCode\x64\Debug\TestCode.exe
+  TestCode.vcxproj -> F:\C++\TestCode\x64\Debug\TestCode.pdb (Partial PDB)

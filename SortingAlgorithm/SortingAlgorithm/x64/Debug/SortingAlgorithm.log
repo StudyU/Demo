@@ -1,0 +1,6 @@
+﻿  sort.cpp
+  maintest.cpp
+f:\c++\sortingalgorithm\sortingalgorithm\maintest.cpp(45): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  正在生成代码...
+  SortingAlgorithm.vcxproj -> F:\C++\TestCode\x64\Debug\SortingAlgorithm.exe
+  SortingAlgorithm.vcxproj -> F:\C++\TestCode\x64\Debug\SortingAlgorithm.pdb (Partial PDB)

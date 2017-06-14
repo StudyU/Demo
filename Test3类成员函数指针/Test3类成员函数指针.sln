@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test3类成员函数指针", "Test3类成员函数指针\Test3类成员函数指针.vcproj", "{5289F933-F224-438E-89CC-7B5CAB765B8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5289F933-F224-438E-89CC-7B5CAB765B8F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5289F933-F224-438E-89CC-7B5CAB765B8F}.Debug|Win32.Build.0 = Debug|Win32
+		{5289F933-F224-438E-89CC-7B5CAB765B8F}.Release|Win32.ActiveCfg = Release|Win32
+		{5289F933-F224-438E-89CC-7B5CAB765B8F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
