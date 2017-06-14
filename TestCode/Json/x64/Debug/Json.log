@@ -1,0 +1,4 @@
+﻿  CppRapidjson.cpp
+f:\c++\testcode\json\cpprapidjson.cpp(50): warning C4267: “参数”: 从“size_t”转换到“rapidjson::SizeType”，可能丢失数据
+  Json.vcxproj -> F:\C++\TestCode\x64\Debug\RapidJson.exe
+  Json.vcxproj -> F:\C++\TestCode\x64\Debug\RapidJson.pdb (Partial PDB)

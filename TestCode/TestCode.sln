@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "binary_search", "..\binary_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "algorithm", "..\algorithm\algorithm\algorithm.vcxproj", "{D88EC87C-21C8-430A-8BA1-167568B9E4FC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RapidJson", "Json\Json.vcxproj", "{37E0089E-9FB8-451F-8CED-73005B880CE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -239,6 +241,14 @@ Global
 		{D88EC87C-21C8-430A-8BA1-167568B9E4FC}.Release|x64.ActiveCfg = Release|Win32
 		{D88EC87C-21C8-430A-8BA1-167568B9E4FC}.Release|x86.ActiveCfg = Release|Win32
 		{D88EC87C-21C8-430A-8BA1-167568B9E4FC}.Release|x86.Build.0 = Release|Win32
+		{37E0089E-9FB8-451F-8CED-73005B880CE8}.Debug|x64.ActiveCfg = Debug|x64
+		{37E0089E-9FB8-451F-8CED-73005B880CE8}.Debug|x64.Build.0 = Debug|x64
+		{37E0089E-9FB8-451F-8CED-73005B880CE8}.Debug|x86.ActiveCfg = Debug|Win32
+		{37E0089E-9FB8-451F-8CED-73005B880CE8}.Debug|x86.Build.0 = Debug|Win32
+		{37E0089E-9FB8-451F-8CED-73005B880CE8}.Release|x64.ActiveCfg = Release|x64
+		{37E0089E-9FB8-451F-8CED-73005B880CE8}.Release|x64.Build.0 = Release|x64
+		{37E0089E-9FB8-451F-8CED-73005B880CE8}.Release|x86.ActiveCfg = Release|Win32
+		{37E0089E-9FB8-451F-8CED-73005B880CE8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
