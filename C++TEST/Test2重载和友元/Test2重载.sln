@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test2重载", "Test2重载\Test2重载.vcproj", "{42F183BE-295A-4C92-8F66-3EA46B7EAF90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42F183BE-295A-4C92-8F66-3EA46B7EAF90}.Debug|Win32.ActiveCfg = Debug|Win32
+		{42F183BE-295A-4C92-8F66-3EA46B7EAF90}.Debug|Win32.Build.0 = Debug|Win32
+		{42F183BE-295A-4C92-8F66-3EA46B7EAF90}.Release|Win32.ActiveCfg = Release|Win32
+		{42F183BE-295A-4C92-8F66-3EA46B7EAF90}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

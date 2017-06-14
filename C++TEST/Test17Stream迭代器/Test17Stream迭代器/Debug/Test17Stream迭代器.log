@@ -1,0 +1,11 @@
+﻿生成启动时间为 2015/10/27 1:13:35。
+     1>项目“F:\C++TEST\Test17Stream迭代器\Test17Stream迭代器\Test17Stream迭代器.vcxproj”在节点 2 上(Build 个目标)。
+     1>Link:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\C++TEST\Test17Stream迭代器\Debug\Test17Stream迭代器.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\C++TEST\Test17Stream迭代器\Debug\Test17Stream迭代器.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\C++TEST\Test17Stream迭代器\Debug\Test17Stream迭代器.lib" /MACHINE:X86 /SAFESEH Debug\stream.obj
+     1>stream.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+     1>LINK : fatal error LNK1207: “F:\C++TEST\Test17Stream迭代器\Debug\Test17Stream迭代器.pdb”中的 PDB 格式不兼容；请删除并重新生成
+     1>已完成生成项目“F:\C++TEST\Test17Stream迭代器\Test17Stream迭代器\Test17Stream迭代器.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.28
