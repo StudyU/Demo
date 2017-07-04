@@ -87,6 +87,11 @@ void TestAlgorithm()
 	// ½µÐò
 	sort(str.rbegin(), str.rend());
 	cout << "½µÐò:" << str << endl;
+
+	int n = min(5, 10);
+	cout << "Min:" << n << endl;
+	int m = max(5, 10);
+	cout << "Max:" << m << endl;
 }
 
 void TestVector()

@@ -16,6 +16,7 @@ public:
 		std::cout << "A object was destroyed" << std::endl;
 	}
 };
+
 typedef void(*deleter)(A*); //define a function type pointer to free;  
 int main()
 {

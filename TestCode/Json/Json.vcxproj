@@ -111,7 +111,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="capitalize\capitalize.cpp" />
+    <ClCompile Include="condense\condense.cpp" />
     <ClCompile Include="CppRapidjson.cpp" />
+    <ClCompile Include="filterkeydom\filterkeydom.cpp" />
+    <ClCompile Include="filterkey\filterkey.cpp" />
+    <ClCompile Include="jsonx\jsonx.cpp" />
+    <ClCompile Include="tutorial.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

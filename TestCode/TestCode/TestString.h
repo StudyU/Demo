@@ -93,6 +93,8 @@ void TestSizeofAndStrlen()
 
 
 
+
+
 void TestString()
 {
 	const char* str = StringUpper("fsdD");

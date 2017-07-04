@@ -1,6 +1,6 @@
-#include<iostream>
+#include <iostream>
 #include <fstream>
-
+#include <windows.h>
 using namespace std;
 
 //输出到文本
@@ -13,7 +13,7 @@ int main()
 
 	ofstream outfile;
 	//创建file.txt文件，如果已经有此文件则将文件中内容清空
-	outfile.open("file.txt");
+	outfile.open("data.txt");
 
 	cout << "Enter : ";
 	cin.getline(automoblie, 50);
@@ -45,6 +45,8 @@ int main()
 	outfile << "b_price: " << b_price <<endl;
 
 	outfile.close();
+
+	system("pause");
 }
 /*
 这里主要牵扯到ios类，这里我们关心这两个ios标记：fixed和showpoint。

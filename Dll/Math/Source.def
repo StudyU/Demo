@@ -1,0 +1,4 @@
+LIBRARY "Math"
+EXPORTS
+	Add @1
+	Mul @2

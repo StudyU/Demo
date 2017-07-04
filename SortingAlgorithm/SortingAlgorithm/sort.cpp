@@ -1,3 +1,40 @@
+/*
+稳定的排序算法：
+
+冒泡排序（bubble sort） — O(n2)
+
+鸡尾酒排序(Cocktail sort, 双向的冒泡排序) — O(n2)
+
+插入排序 （insertion sort）— O(n2)
+
+桶排序 （bucket sort）— O(n); 需要 O(k) 额外 记忆体
+
+归并排序 （merge sort）— O(n log n); 需要 O(n) 额外记忆体
+
+原地归并排序 — O(n2)
+
+二叉树排序 （Binary tree sort） — O(n log n); 需要 O(n) 额外记忆体
+
+基数排序 （radix sort）— O(n·k); 需要 O(n) 额外记忆体
+
+
+不稳定的排序算法：
+
+选择排序 （selection sort）— O(n2)
+
+希尔排序 （shell sort）— O(n log n) 如果使用最佳的现在版本
+
+Comb sort — O(n log n)
+
+堆排序 （heapsort）— O(n log n)
+
+Smoothsort — O(n log n)
+
+快速排序 （quicksort）— O(n log n) 期望时间, O(n2) 最坏情况; 对於大的、乱数串列一般相信是最快的已知排序
+
+一般来说：存在不相邻交换的排序算法是不稳定的，相邻交换的排序算法是稳定的；对于相邻交换的稳定排序算法，通过控制交换条件可以转换成不稳定排序算法；冒泡、插入、归并和基数排序是稳定的；选择、快速、希尔和堆排序是不稳定的。
+*/
+
 //n^2
 //冒泡排序V[n]不参与排序
 void BubbleSort(int V[], int n)

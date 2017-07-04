@@ -3,6 +3,9 @@
 #define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1
 
 #include <iostream>
+#include <complex>
+#include <limits>
+#include <algorithm>
 #include <windows.h>
 #include "TestCode.h"
 #include "TestString.h"
@@ -12,11 +15,11 @@ using namespace std;
 //B* B::m_pThis = NULL;
 int main()
 {
-	TestString();
+	//TestString();
 	//TestSizeofAndStrlen();
 	//TestVector();
 	//TestOperate();
-	//TestAlgorithm();
+	TestAlgorithm();
 	//B* pB = new B;
 	//B::m_pThis->testvirtual();
 	//pB->teststatic();

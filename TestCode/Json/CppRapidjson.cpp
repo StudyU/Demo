@@ -76,7 +76,7 @@ void testSimpleDoc()
 	Print(buffer.GetString());
 }
 
-int main()
+int main1()
 {
 	testSimpleDoc();
 

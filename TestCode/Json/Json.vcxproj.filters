@@ -18,5 +18,23 @@
     <ClCompile Include="CppRapidjson.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="tutorial.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="capitalize\capitalize.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filterkey\filterkey.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="condense\condense.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="filterkeydom\filterkeydom.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jsonx\jsonx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

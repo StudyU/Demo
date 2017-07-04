@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <windows.h>
 using namespace std;
 
 // 二分法查找,数组必须是有序的
@@ -36,7 +36,7 @@ int main()
 	int putin;
 	cout << "Please enter you want to find number: ";
 	cin >> putin;
-	int loc = binary_search(&a[0], 10, putin);
+	int loc = binary_search(a, 10, putin);
 
 	if (loc == -1)
 	{
@@ -47,5 +47,6 @@ int main()
 		cout << "find " << putin << " at a[" << loc << "]" << endl;
 	}
 
+	system("pause");
 	return 0;
 }
