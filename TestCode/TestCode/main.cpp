@@ -1,14 +1,15 @@
 //旧函数替换成 Security CRT functions 
-#define _CRT_SECURE_NO_DEPRECATE
-#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1
+//#define _CRT_SECURE_NO_DEPRECATE
+//#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1
 
 #include <iostream>
-#include <complex>
-#include <limits>
-#include <algorithm>
-#include <windows.h>
-#include "TestCode.h"
-#include "TestString.h"
+//#include <complex>
+//#include <limits>
+//#include <algorithm>
+//#include <windows.h>
+//#include "TestCode.h"
+//#include "TestString.h"
+#include <string>
 using namespace std;
 
 //类的静态成员变量必须先初始化再使用
@@ -19,7 +20,7 @@ int main()
 	//TestSizeofAndStrlen();
 	//TestVector();
 	//TestOperate();
-	TestAlgorithm();
+	//TestAlgorithm();
 	//B* pB = new B;
 	//B::m_pThis->testvirtual();
 	//pB->teststatic();
@@ -30,6 +31,9 @@ int main()
 	//size_t  HashValue1 = GetHashValue(n);
 	//size_t  HashValue2 = GetHashValue(nn);
 	//cout << "HashValue1:" << HashValue1 << "HashValue2:" << HashValue2 << endl;
+
+	std::string s = "-1";
+	int ss = atoi(s.c_str());
 
 	cout << "↑↑↑ TestCode!!!  ↑↑↑" << endl;
 	system("pause");

@@ -28,6 +28,7 @@ int util_compress_int2(int iHighValue, int iLowValue)
 
 int main()
 {
+		//stdint.h 
 	//cout << "int is:" << sizeof(int) << " MaxNum is:" << INT_MAX << endl;
 	//cout << "short is:" << sizeof(short) << " MaxNum is:" << SHRT_MAX << endl;
 	//cout << "char is:" << sizeof(char) << " MaxNum is:" << CHAR_MAX << endl;

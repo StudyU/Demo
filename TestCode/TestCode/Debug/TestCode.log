@@ -1,3 +1,2 @@
 ﻿  main.cpp
-  TestCode.vcxproj -> F:\C++\TestCode\Debug\TestCode.exe
-  TestCode.vcxproj -> F:\C++\TestCode\Debug\TestCode.pdb (Partial PDB)
+f:\c++\testcode\testcode\main.cpp : fatal error C1041: 无法打开程序数据库“F:\C++\TestCode\TestCode\Debug\vc140.idb”；如果要将多个 CL.EXE 写入同一个 .PDB 文件，请使用 /FS
