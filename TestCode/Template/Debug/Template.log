@@ -1,0 +1,8 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Template.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  TemplateCode.cpp
+f:\c++\testcode\template\templatecode.cpp(102): warning C4101: “error1”: 未引用的局部变量
+f:\c++\testcode\template\templatecode.cpp(103): warning C4101: “error2”: 未引用的局部变量
+f:\c++\testcode\template\templatecode.cpp(104): warning C4101: “OK”: 未引用的局部变量
+f:\c++\testcode\template\templatecode.cpp(140): warning C4101: “k”: 未引用的局部变量
+  Template.vcxproj -> F:\C++\TestCode\Debug\FunctionTemplate.exe
+  Template.vcxproj -> F:\C++\TestCode\Debug\FunctionTemplate.pdb (Partial PDB)

@@ -29,16 +29,16 @@ int util_compress_int2(int iHighValue, int iLowValue)
 int main()
 {
 		//stdint.h 
-	//cout << "int is:" << sizeof(int) << " MaxNum is:" << INT_MAX << endl;
-	//cout << "short is:" << sizeof(short) << " MaxNum is:" << SHRT_MAX << endl;
-	//cout << "char is:" << sizeof(char) << " MaxNum is:" << CHAR_MAX << endl;
-	//cout << "long is:" << sizeof(long) << " MaxNum is:" << LONG_MAX << endl;
-	//cout << "float is:" << sizeof(float) << endl;
-	//cout << "double is:" << sizeof(double) << endl;
-	//cout << "wchar_t is:" << sizeof(wchar_t) << endl;
-	//cout << "size_t is:" << sizeof(size_t) << endl;
-	//cout << "string is:" << sizeof(string) << endl;
-	//cout << "char* is:" << sizeof(char*) <<endl;
+	cout << "int is:" << sizeof(int) << " MaxNum is:" << INT_MAX << endl;
+	cout << "short is:" << sizeof(short) << " MaxNum is:" << SHRT_MAX << endl;
+	cout << "char is:" << sizeof(char) << " MaxNum is:" << CHAR_MAX << endl;
+	cout << "long is:" << sizeof(long) << " MaxNum is:" << LONG_MAX << endl;
+	cout << "float is:" << sizeof(float) << endl;
+	cout << "double is:" << sizeof(double) << endl;
+	cout << "wchar_t is:" << sizeof(wchar_t) << endl;
+	cout << "size_t is:" << sizeof(size_t) << endl;
+	cout << "string is:" << sizeof(string) << endl;
+	cout << "char* is:" << sizeof(char*) <<endl;
 	
 	//float f = 2.2f;
 	//double d = (double)f;
@@ -65,15 +65,15 @@ int main()
 	//cout << "int4=" << int4 << endl
 	//	<< "int2=" << int2;
 
-	int n = 2147483647;
-	int m = n * 2;
-	int i = n * 3;
-	cout << "n:" << n << "...m:" << m << "...i:" << i << endl;
+	//int n = 2147483647;
+	//int m = n * 2;
+	//int i = n * 3;
+	//cout << "n:" << n << "...m:" << m << "...i:" << i << endl;
 
-	unsigned int nn = 4294967295;
-	unsigned int mm = nn * 2;
-	unsigned int ii = nn * 3;
-	cout << "nn;" << nn << "...mm:" << mm << "...ii:" << ii << endl;
+	//unsigned int nn = 4294967295;
+	//unsigned int mm = nn * 2;
+	//unsigned int ii = nn * 3;
+	//cout << "nn;" << nn << "...mm:" << mm << "...ii:" << ii << endl;
 
 	system("pause");
 

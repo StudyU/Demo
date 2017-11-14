@@ -1,0 +1,4 @@
+﻿  functionalBind.cpp
+f:\c++\functional\functional\functionalbind.cpp(106): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  functional.vcxproj -> F:\C++\functional\Debug\functional.exe
+  functional.vcxproj -> F:\C++\functional\Debug\functional.pdb (Partial PDB)
