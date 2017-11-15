@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h>
+#include <Windows.h>
 using namespace std;
 
 // 二分法查找,数组必须是有序的
