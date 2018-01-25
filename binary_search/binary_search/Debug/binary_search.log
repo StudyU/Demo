@@ -1,3 +1,4 @@
 ﻿  binary_search.cpp
-binary_search.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
+binary_search.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:REF”规范)
   binary_search.vcxproj -> F:\C++\CodeTest\Debug\binary_search.exe

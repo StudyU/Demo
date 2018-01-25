@@ -103,6 +103,32 @@ return 0;
 }
 */
 
+/*
+class A
+{
+public:
+	char buff[4] = {};
+	std::function<void()> f;
+	void doX()
+	{
+		int n = 123;
+		f = [this, n]()
+		{
+			f = [a = 1, b = 2]() {};
+			int b = n;
+		};
+		f();
+	}
+};
+
+int main()
+{
+	A a;
+	a.doX();
+
+	return 0;
+}
+*/
 #include <random>
 #include <iostream>
 #include <functional>

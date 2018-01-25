@@ -1,2 +1,4 @@
 ﻿  VectorDynExpand.cpp
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
+VectorDynExpand.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:REF”规范)
   VectorDynamicExpand.vcxproj -> F:\C++\CodeTest\Debug\VectorDynamicExpand.exe

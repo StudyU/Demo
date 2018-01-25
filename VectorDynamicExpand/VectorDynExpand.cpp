@@ -19,24 +19,24 @@ reserveÖ»ÊÇ±£³ÖÒ»¸ö×îĞ¡µÄ¿Õ¼ä´óĞ¡£¬¶øresizeÔòÊÇ¶Ô»º³åÇø½øĞĞÖØĞÂ·ÖÅä£¬ÀïÃæÉæ¼°µ½µ
 */
 int main()
 {
-	/*
+	
 	vector<int> arr1;
 	ofstream wf("1.txt");
 	clock_t start = clock();	// ¼ÆÊ±µ¥Î»ms(±ê×¼C/C++ÖĞ£¬×îĞ¡µÄ¼ÆÊ±µ¥Î»ÊÇ1ºÁÃë)
-	for (int i = 0; i < 100; ++i)
+	for (int i = 0; i < 10000; ++i)
 	{
 		arr1.push_back(i);
 		wf << "capacity=" << arr1.capacity() << ",size=" << arr1.size() << endl;
 	}
-	wf << clock() - start << endl;
+	wf << "SpandTime:" << clock() - start << "ms;" << endl;
 	wf.close();
-	*/
+
 
 	/************************************************************************/
 	/* vectorÈçºÎÇ¿ÖÆÊÍ·ÅÄÚ´æ¿Õ¼ä											*/
 	/* Ä¬ÈÏÖ»ÓĞÎö¹¹Ê±²Å»áÊÍ·Å												*/
 	/************************************************************************/
-
+	/*
 	vector<int> arr;
 	cout << "Ä¬ÈÏÇé¿öÎ´³õÊ¼»¯Ê±£¬capacity=" << arr.capacity() << ",size=" << arr.size() << endl;
 	arr.resize(100, 100);
@@ -48,7 +48,8 @@ int main()
 	vector<int>::iterator itor = arr.begin() + 10;
 	arr.erase(arr.begin(), itor);
 	cout << "×îºó£¬capacity=" << arr.capacity() << ",size=" << arr.size() << endl;
-	
+	*/
+	/*
 	//·½·¨Ò»¡¢
 	vector<int>().swap(arr); //Ç¿ÖÆÊÍ·Å¿Õ¼ä
 	/*
@@ -57,9 +58,9 @@ int main()
 		vector<int> temp;//ÁÙÊ±¶ÔÏóÎ´³õÊ¼»¯£¬Æä»º³åÇø´óĞ¡Îª0£¬Ã»ÓĞÊı¾İ
 		arr.swap(temp);	//ÓëÎÒÃÇµÄ¶ÔÏó½»»»Êı¾İ£¬arrµÄ»º³åÇø¾ÍÃ»ÁË¡£  					 
 	}//ÁÙÊ±±äÁ¿»á±»Îö¹¹£¬tempµ÷ÓÃvectorÎö¹¹º¯ÊıÊÍ·Å¿Õ¼ä
-	*/
+	
 	cout << "ÊÍ·Å£¬capacity=" << arr.capacity() << ",size=" << arr.size() << endl;
-
+	*/
 	/*
 	clock_t start = clock();
 	for (int num = 0; num<10000; ++num)

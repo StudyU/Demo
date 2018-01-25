@@ -1,5 +1,6 @@
 ﻿  mainstack.cpp
   main.cpp
   正在生成代码...
-main.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
-  Test2链表.vcxproj -> F:\C++\TestCode\Debug\listtable.exe
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
+main.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:REF”规范)
+  Test2链表.vcxproj -> F:\C++\CodeTest\Debug\listtable.exe

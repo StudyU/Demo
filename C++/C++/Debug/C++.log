@@ -1,3 +1,5 @@
 ﻿  Pair.cpp
-Pair.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
-  C++.vcxproj -> F:\C++\TestCode\Debug\C++.exe
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
+Pair.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:REF”规范)
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 _main，该符号在函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中被引用
+F:\C++\CodeTest\Debug\C++.exe : fatal error LNK1120: 1 个无法解析的外部命令

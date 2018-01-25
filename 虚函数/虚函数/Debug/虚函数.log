@@ -1,2 +1,8 @@
-﻿  main.cpp
-  虚函数.vcxproj -> F:\C++\虚函数\Debug\虚函数.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(虚函数.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  point.cpp
+  main.cpp
+  cylinder.cpp
+  circle.cpp
+  正在生成代码...
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
+  虚函数.vcxproj -> F:\C++\CodeTest\Debug\victuralfunc.exe

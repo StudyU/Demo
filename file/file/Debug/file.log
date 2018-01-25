@@ -1,3 +1,4 @@
 ﻿  file.cpp
-file.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
-  file.vcxproj -> F:\C++\TestCode\Debug\file.exe
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
+file.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:REF”规范)
+  file.vcxproj -> F:\C++\CodeTest\Debug\file.exe

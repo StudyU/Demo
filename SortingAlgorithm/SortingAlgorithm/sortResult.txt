@@ -12,3 +12,15 @@
  		Time:	0.012000 seconds
 第0次插入排序:
  		Time:	5.039000 seconds
+第0次:
+ 排序内容：0~999共100000 个整数
+第0次计数排序:
+ 		Time:	0.001000 seconds
+第0次基数排序:
+ 		Time:	0.018000 seconds
+第0次堆排序:
+ 		Time:	0.015000 seconds
+第0次快速排序:
+ 		Time:	0.020000 seconds
+第0次希尔排序:
+ 		Time:	0.013000 seconds

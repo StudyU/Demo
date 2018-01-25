@@ -1,3 +1,4 @@
 ﻿  Byte.cpp
-Byte.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
-  Byte.vcxproj -> F:\C++\TestCode\Debug\Byte.exe
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
+Byte.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:REF”规范)
+  Byte.vcxproj -> F:\C++\CodeTest\Debug\Byte.exe

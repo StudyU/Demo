@@ -1,3 +1,4 @@
 ﻿  main.cpp
-  Stack_Heap.vcxproj -> F:\C++\Stack_Heap\Debug\Stack_Heap.exe
-  Stack_Heap.vcxproj -> F:\C++\Stack_Heap\Debug\Stack_Heap.pdb (Partial PDB)
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
+main.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:REF”规范)
+  Stack_Heap.vcxproj -> F:\C++\CodeTest\Debug\Stack_Heap.exe

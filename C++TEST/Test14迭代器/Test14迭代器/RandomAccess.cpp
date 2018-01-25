@@ -1,6 +1,7 @@
 //随机存取迭代器{对lists，maps，sets无效}
 #include <iostream>
 #include <vector>
+#include <windows.h>
 using namespace std;
 
 int main()
@@ -34,4 +35,8 @@ int main()
 		cout << *pos << ' ';
 	}
 	cout << endl;
+
+	system("pause");
+
+	return 0;
 }

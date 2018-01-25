@@ -107,35 +107,37 @@ void CallBack::AddCallBack(char *event, CallBackFunction pCBF, CallBack *pCBO)
 {
 	//如事件名为空，退出
 	if( (event == NULL)?1:(strlen(event) == 0)) return;
+
 	//寻找因删除事件记录而产生的第一个空闲位置，并填写新事件记录
 	for(int start=0;start<lastpos;start++)
 	{
 		if(callBackList[start].IsEmpty())
 		{
 			callBackList[start] = EventRecord(event,pCBO,pCBF);
-			break;
+			return; //确实存在空闲位置
 		}
-		if(start < lastpos) return; //确实存在空闲位置
+		//if(start < lastpos) return; //确实存在空闲位置
 	}
-		//没有空闲位置，在回调表后追加新记录
-		if(lastpos == size) //回调表已满，需“伸长”
+
+	//没有空闲位置，在回调表后追加新记录
+	if(lastpos == size) //回调表已满，需“伸长”
+	{
+		EventRecord *tempList = callBackList;//暂存旧回调表指针
+		//以一定的步长“伸长”回调表
+		callBackList = new EventRecord[size + CALLBACKLIST_INCREMENT];
+		if(!callBackList)
 		{
-			EventRecord *tempList = callBackList;//暂存旧回调表指针
-			//以一定的步长“伸长”回调表
-			callBackList = new EventRecord[size + CALLBACKLIST_INCREMENT];
-			if(!callBackList)
-			{
-				cerr<<"CallBack: memory allocation error."<<endl;
-				exit(1);
-			}
-			//复制旧回调表中的记录
-			for(int i = 0; i < size; i++) callBackList[i] = tempList[i];
-			delete [] tempList;//删除旧回调表
-			size += CALLBACKLIST_INCREMENT;//记下新回调表的尺寸
+			cerr<<"CallBack: memory allocation error."<<endl;
+			exit(1);
 		}
-		//构造新的事件记录并将其填入回调表中
-		callBackList[lastpos] = EventRecord(event,pCBO,pCBF);
-		lastpos++;
+		//复制旧回调表中的记录
+		for(int i = 0; i < size; i++) callBackList[i] = tempList[i];
+		delete [] tempList;//删除旧回调表
+		size += CALLBACKLIST_INCREMENT;//记下新回调表的尺寸
+	}
+	//构造新的事件记录并将其填入回调表中
+	callBackList[lastpos] = EventRecord(event,pCBO,pCBF);
+	lastpos++;
 }
 void CallBack::AddCallBack(char *event,CallBackStaticFunction pCBSF)
 {
