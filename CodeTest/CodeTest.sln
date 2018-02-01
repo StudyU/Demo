@@ -137,10 +137,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test19multiset", "..\C++TES
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CallBack", "..\C++TEST\回调\回调\回调.vcxproj", "{F8CC5FAB-EDE5-4A76-A018-0B097622B492}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Socket", "Socket\Socket.vcxproj", "{E33B4C47-5E03-4628-A571-FB3B248E144C}"
+EndProject
 Global
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
@@ -572,11 +571,22 @@ Global
 		{F8CC5FAB-EDE5-4A76-A018-0B097622B492}.Release|x64.ActiveCfg = Release|Win32
 		{F8CC5FAB-EDE5-4A76-A018-0B097622B492}.Release|x86.ActiveCfg = Release|Win32
 		{F8CC5FAB-EDE5-4A76-A018-0B097622B492}.Release|x86.Build.0 = Release|Win32
+		{E33B4C47-5E03-4628-A571-FB3B248E144C}.Debug|x64.ActiveCfg = Debug|x64
+		{E33B4C47-5E03-4628-A571-FB3B248E144C}.Debug|x64.Build.0 = Debug|x64
+		{E33B4C47-5E03-4628-A571-FB3B248E144C}.Debug|x86.ActiveCfg = Debug|Win32
+		{E33B4C47-5E03-4628-A571-FB3B248E144C}.Debug|x86.Build.0 = Debug|Win32
+		{E33B4C47-5E03-4628-A571-FB3B248E144C}.Release|x64.ActiveCfg = Release|x64
+		{E33B4C47-5E03-4628-A571-FB3B248E144C}.Release|x64.Build.0 = Release|x64
+		{E33B4C47-5E03-4628-A571-FB3B248E144C}.Release|x86.ActiveCfg = Release|Win32
+		{E33B4C47-5E03-4628-A571-FB3B248E144C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F64F130-1AB6-40CE-A8F8-3453394A8E85}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
