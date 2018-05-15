@@ -25,10 +25,12 @@ struct Person
 	string	Name;
 	int			Age;
 	vector<Education> Educations;
+	//map<int, Education> mapEducations;
 };
 
 AJSON(Education, School, GPA)
 AJSON(Person, Name, Age, Educations)
+//AJSON(Person, Name, Age, mapEducations)
 
 int main(int argc, char * argv[])
 {
@@ -36,6 +38,9 @@ int main(int argc, char * argv[])
 	person.Name = "Bob";
 	person.Age = 28;
 	person.Educations.push_back(Education("MIT", 600));
+	//person.mapEducations.insert(std::make_pair<int, Education>(1,Education("MIT", 600)));
+	//person.mapEducations.insert(std::make_pair<int, Education>(2, Education("MITxz", 6020)));
+	//person.mapEducations.insert(std::make_pair<int, Education>(3, Education("MIsT", 6030)));
 	string_stream ss;
 	save_to(ss, person);
 	std::cout << ss.str() << std::endl;
