@@ -1,5 +1,5 @@
 #pragma once
-/*类中定义*/
+/*类中定义,非线程安全*/
 #define DEFINE_SINGLETON(a)\
 private : a(void) {}; ~a(void) {}; a(const a&) {}; a& operator =(const a&) {};\
 public : static a* getInstance() {static a instance; return & instance;};
