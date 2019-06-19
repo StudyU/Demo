@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DoubleLinkedList.h" />
     <ClInclude Include="DoublyLinkedList.h" />
   </ItemGroup>
   <ItemGroup>

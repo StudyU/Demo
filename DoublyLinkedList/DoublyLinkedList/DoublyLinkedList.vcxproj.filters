@@ -18,6 +18,9 @@
     <ClInclude Include="DoublyLinkedList.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="DoubleLinkedList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DoublyLinkedList.cpp">
