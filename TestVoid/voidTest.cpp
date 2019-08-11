@@ -2,6 +2,9 @@
 #include <iostream>
 #include "voidTest.h"
 #include <string>
+#include "GM.h"
+
+GMethodCreator::MapMethod GMethodCreator::m_mapMethod;
 
 // https://en.cppreference.com/w/cpp/utility/functional/invoke
 // https://www.jianshu.com/p/b90d1091a4ff
@@ -74,10 +77,12 @@ public:
 	static int test21(float x)
 	{
 		std::cout << "static A::test2"<< x << std::endl;
+		return 0;
 	}
 
 	int test3(int i, std::string y)
 	{
+		//ADD_GM_METHOD_OBJ(test, this);
 		std::cout << i <<  y << std::endl;
 		return 0;
 	}
@@ -109,8 +114,8 @@ std::string test4(std::string& k)
 	return k;
 }
 
-template<typename RType, typename ...Args>
-GMEvent<RType, Args... >::GMMAP GMEvent::m_func;
+//template<typename RType, typename ...Args>
+//GMEvent<RType, Args...>::GMMAP GMEvent<RType, Args...>::m_func;
 
 int main()
 {
@@ -156,7 +161,15 @@ int main()
 	//std::cout << function_traits<test1>::arg<0>::size_type << std::endl;
 
 	//GMEvent<int, int>::GMAdd(str1, test1);
-	GMEvent<int, int>::GMAdd(str, test1);
+	//GMEvent<int, int>::GMAdd(str, test1);
+	ADD_GM_METHOD(test1);
+	ADD_GM_METHOD(test2);
+	ADD_GM_METHOD(test3);
+	ADD_GM_METHOD(A::test21);
+	A a;
+	a.test3(i, str);
+
+
 
 	return 0;
 }

@@ -23,5 +23,8 @@
     <ClInclude Include="voidTest.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="GM.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

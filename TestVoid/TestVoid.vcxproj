@@ -126,6 +126,7 @@
     <ClCompile Include="voidTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GM.h" />
     <ClInclude Include="voidTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
