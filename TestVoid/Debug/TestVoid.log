@@ -1,0 +1,15 @@
+﻿  voidTest.cpp
+C:\GitHub\TestVoid\voidTest.cpp(118,36): error C2923:  “function_traits”: 对于参数“T”，“test3”不是有效的 模板 类型变量
+C:\GitHub\TestVoid\voidTest.cpp(68): message :  参见“test3”的声明
+C:\GitHub\TestVoid\voidTest.cpp(118,42): error C2923:  “function_traits”: 对于参数“T”，“test3”不是有效的 模板 类型变量
+C:\GitHub\TestVoid\voidTest.cpp(68): message :  参见“test3”的声明
+C:\GitHub\TestVoid\voidTest.cpp(118,39): error C2955:  “function_traits”: 使用 类 模板 需要 模板 参数列表
+C:\GitHub\TestVoid\voidTest.h(5): message :  参见“function_traits”的声明
+C:\GitHub\TestVoid\voidTest.cpp(118,39): error C2027:  使用了未定义类型“function_traits”
+C:\GitHub\TestVoid\voidTest.h(5): message :  参见“function_traits”的声明
+C:\GitHub\TestVoid\voidTest.cpp(118,42): error C2065:  “arg”: 未声明的标识符
+C:\GitHub\TestVoid\voidTest.cpp(118,47): error C2039:  “type”: 不是“`global namespace'”的成员
+C:\GitHub\TestVoid\voidTest.cpp(118,52): error C2065:  “type”: 未声明的标识符
+C:\GitHub\TestVoid\voidTest.cpp(118,64): error C2563:  在形参表中不匹配
+C:\GitHub\TestVoid\voidTest.cpp(118,64): error C2568:  “<<”: 无法解析函数重载
+C:\GitHub\TestVoid\voidTest.cpp(118,64): message :  可能是“std::basic_ostream<_Elem,_Traits> &std::endl(std::basic_ostream<_Elem,_Traits> &)”
