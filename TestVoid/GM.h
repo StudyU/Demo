@@ -1,6 +1,10 @@
 #pragma once
 #include <map>
 #include <type_traits>
+#include <vector>
+#include <string>
+typedef std::vector<std::string> VEC_STRING;
+
 
 #define ADD_GM_METHOD(func_name) GMethodCreator::Add(#func_name, RTTIFuncTypeOf(func_name))
 #define ADD_GM_METHOD_OBJ(func_name,obj) GMethodCreator::Add(#func_name, RTTIFuncTypeOf(obj,&func_name))
@@ -10,15 +14,13 @@
 class MethodType
 {
 public:
-	MethodType() :m_bIsStatic(false), m_pObj(nullptr) {}
-	//virtual void Invoke(_KERNEL* pKernel, const IVarList& args, IVarList& res) = 0;
-	bool IsStatic() { return m_bIsStatic; }
+	MethodType() : m_pObj(nullptr) {}
 	void* GetObj() { return m_pObj; }
+	virtual void Invoke(VEC_STRING vecArgs) = 0;
 protected:
-	bool m_bIsStatic;						// 是否类里面的静态成员函数
 	void* m_pObj;							// 成员对象
-};
 
+};
 
 template<class __RT, class __C, class ...Args>
 class RTTIFuncType : public MethodType
@@ -34,28 +36,15 @@ public:
 		this->m_pObj = (void*)obj;
 	}
 
-	static void Invoke()
+	void Invoke(VEC_STRING vecArgs)
+	{
+
+	}
+
+	void Invoke(Args...)
 	{
 		std::invoke(f, obj, Args...);
 	}
-	//virtual void Invoke(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	InnerInvoke<__RT>(pKernel, args, res);
-	//}
-
-private:
-
-	//template<class ___RT>
-	//void InnerInvoke(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	int nIndex = 0;
-	//	res.AddString(TypeToString((((__C*)m_pObj)->*f)(ARGS1(pKernel, args, nIndex))).c_str());
-	//}
-
-	//template<>
-	//void InnerInvoke<void>(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	int nIndex = 0;
-	//	(((__C*)m_pObj)->*f)(ARGS1(pKernel, args, nIndex));
-	//	res.AddString("void");
-	//}
 };
 
 
@@ -69,33 +58,16 @@ public:
 	RTTIFuncType_s(fptr f)
 	{
 		this->f = f;
-		m_bIsStatic = true;
 	}
 
-	//virtual void Invoke(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	InnerInvoke<__RT>(pKernel, args, res);
-	//}
+	void Invoke(VEC_STRING vecArgs)
+	{
 
-	static void Invoke()
+	}
+	void Invoke(Args...)
 	{
 		std::invoke(f, Args...);
 	}
-
-private:
-
-	//template<class ___RT>
-	//void InnerInvoke(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	int nIndex = 0;
-	//	res.AddString(TypeToString(((*f)(ARGS1(pKernel, args, nIndex)))).c_str());
-	//}
-
-	//template<>
-	//void InnerInvoke<void>(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	int nIndex = 0;
-	//	(*f)(ARGS1(pKernel, args, nIndex));
-	//	res.AddString("void");
-	//}
-
 };
 
 // 类成员函数
@@ -116,7 +88,7 @@ private:
 	static MapMethod m_mapMethod;
 public:
 	template<typename... Args>
-	static bool Invoke(const char* szFuncName, const Args& ...)
+	static bool Invoke(const char* szFuncName, const Args ...arg)
 	{
 		if (szFuncName == nullptr)
 		{
@@ -135,7 +107,24 @@ public:
 			return false;
 		}
 
-		pMethod->Invoke();
+		//std::cout << std::is_same<int, function_traits<pMethod>::arg<0>::type>::value << std::endl;
+		//if (pMethod->GetObj() == nullptr)
+		//{
+		//	RTTIFuncType_s* p = dynamic_cast<RTTIFuncType_s*>(pMethod);
+		//	if (p != nullptr)
+		//	{
+		//		p->Invoke((arg)...);
+		//	}
+		//}
+		//else
+		//{
+		//	RTTIFuncType* p = dynamic_cast<RTTIFuncType*>(pMethod);
+		//	if (p != nullptr)
+		//	{
+		//		p->Invoke((arg)...);
+		//	}
+		//}
+
 		return true;
 	}
 
@@ -196,7 +185,7 @@ public:
 		for (MapMethod::iterator iter = m_mapMethod.begin(); iter != m_mapMethod.end();)
 		{
 			MethodType* pMethod = iter->second;
-			if (pMethod != NULL && !pMethod->IsStatic() && pMethod->GetObj() == pObj)
+			if (pMethod != NULL && pMethod->GetObj() == pObj)
 			{
 				if (iter->second != nullptr)
 				{

@@ -8,7 +8,8 @@ GMethodCreator::MapMethod GMethodCreator::m_mapMethod;
 
 // https://en.cppreference.com/w/cpp/utility/functional/invoke
 // https://www.jianshu.com/p/b90d1091a4ff
-//class GetArgsVal https://stackoverflow.com/questions/9065081/how-do-i-get-the-argument-types-of-a-function-pointer-in-a-variadic-template-cla#
+// https://stackoverflow.com/questions/9065081/how-do-i-get-the-argument-types-of-a-function-pointer-in-a-variadic-template-cla#
+//class GetArgsVal 
 //{
 //public:
 //	GetArgsVal(const std::vector<void*>& vec) :m_vecArgs(vec), m_index(m_vecArgs.size())
@@ -88,6 +89,10 @@ public:
 	}
 };
 
+struct R {};
+struct B {};
+typedef std::function<R(A, B)> fun;
+
 int test1(int i)
 {
 	std::cout << i << std::endl;
@@ -114,10 +119,16 @@ std::string test4(std::string& k)
 	return k;
 }
 
+template<typename T>
+std::string TypeAsString(T&& value)
+{
+	return std::to_string(value);
+}
+
 //template<typename RType, typename ...Args>
 //GMEvent<RType, Args...>::GMMAP GMEvent<RType, Args...>::m_func;
 
-int main()
+int main1()
 {
 	int i = 9;
 	std::string str("nihao");
@@ -159,6 +170,11 @@ int main()
 	//invoke(&(A::test3), a, std::make_tuple(9, "dsd"));
 
 	//std::cout << function_traits<test1>::arg<0>::size_type << std::endl;
+	A a;
+
+	std::cout << std::is_same<R, function_traits<fun>::result_type>::value << std::endl;
+	std::cout << std::is_same<A, function_traits<fun>::arg<0>::type>::value << std::endl;
+	std::cout << std::is_same<B, function_traits<fun>::arg<1>::type>::value << std::endl;
 
 	//GMEvent<int, int>::GMAdd(str1, test1);
 	//GMEvent<int, int>::GMAdd(str, test1);
@@ -166,11 +182,18 @@ int main()
 	ADD_GM_METHOD(test2);
 	ADD_GM_METHOD(test3);
 	ADD_GM_METHOD(A::test21);
-	A a;
+	
 	a.test3(i, str);
+	ADD_GM_METHOD_OBJ(A::test3, &a);
+	//VEC_STRING vecArgs;
+	//vecArgs.push_back(str);
+	//GMethodCreator::Invoke("test1");
 
+	std::invoke(A::test21, 3.5f);
+	std::invoke(test3, i, str, f);
 
-
+	std::string aa = TypeAsString(i);
+	//std::string as = TypeAsString(a);
 	return 0;
 }
 
