@@ -123,9 +123,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="voidTest.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FunctionInvoke.h" />
+    <ClInclude Include="FunctionTraits.h" />
     <ClInclude Include="GM.h" />
     <ClInclude Include="voidTest.h" />
   </ItemGroup>

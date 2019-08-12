@@ -1,6 +1,12 @@
 #pragma once
 #include <map>
 #include <type_traits>
+#include <vector>
+#include <string>
+#include "FunctionTraits.h"
+#include <iostream>
+typedef std::vector<std::string> VEC_STRING;
+
 
 #define ADD_GM_METHOD(func_name) GMethodCreator::Add(#func_name, RTTIFuncTypeOf(func_name))
 #define ADD_GM_METHOD_OBJ(func_name,obj) GMethodCreator::Add(#func_name, RTTIFuncTypeOf(obj,&func_name))
@@ -10,15 +16,13 @@
 class MethodType
 {
 public:
-	MethodType() :m_bIsStatic(false), m_pObj(nullptr) {}
-	//virtual void Invoke(_KERNEL* pKernel, const IVarList& args, IVarList& res) = 0;
-	bool IsStatic() { return m_bIsStatic; }
+	MethodType() : m_pObj(nullptr) {}
 	void* GetObj() { return m_pObj; }
+	virtual void Invoke(VEC_STRING vecArgs) = 0;
 protected:
-	bool m_bIsStatic;						// 是否类里面的静态成员函数
 	void* m_pObj;							// 成员对象
-};
 
+};
 
 template<class __RT, class __C, class ...Args>
 class RTTIFuncType : public MethodType
@@ -34,27 +38,22 @@ public:
 		this->m_pObj = (void*)obj;
 	}
 
-	static void Invoke()
+	void Invoke(VEC_STRING vecArgs)
 	{
-		std::invoke(f, obj, Args...);
+		// 解析函数的参数类型
+	/*	std::cout << "RTTIFuncType return std::decay" << std::is_same<int, std::decay<FunctionTraits<decltype(f)>::args<0>::functionType>::type>::value << std::endl;
+
+
+		int n = FunctionTraits<decltype(f)>::arity;
+		for (int i = 0; i < n; ++i)
+		{
+			std::cout << "RTTIFuncType args std::decay " << std::is_same<int, std::decay<FunctionTraits<decltype(f)>::args<i>::type>::type>::value << std::endl;
+			std::cout << "RTTIFuncType args std::decay " << std::is_same<std::string, FunctionTraits<decltype(f)>::args<i>::type>::value << std::endl;
+		}*/
 	}
-	//virtual void Invoke(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	InnerInvoke<__RT>(pKernel, args, res);
-	//}
-
-private:
-
-	//template<class ___RT>
-	//void InnerInvoke(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	int nIndex = 0;
-	//	res.AddString(TypeToString((((__C*)m_pObj)->*f)(ARGS1(pKernel, args, nIndex))).c_str());
-	//}
-
-	//template<>
-	//void InnerInvoke<void>(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	int nIndex = 0;
-	//	(((__C*)m_pObj)->*f)(ARGS1(pKernel, args, nIndex));
-	//	res.AddString("void");
+	//void Invoke(Args...)
+	//{
+	//	std::invoke(f, obj, Args...);
 	//}
 };
 
@@ -69,33 +68,26 @@ public:
 	RTTIFuncType_s(fptr f)
 	{
 		this->f = f;
-		m_bIsStatic = true;
 	}
 
-	//virtual void Invoke(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	InnerInvoke<__RT>(pKernel, args, res);
-	//}
-
-	static void Invoke()
+	void Invoke(VEC_STRING vecArgs)
 	{
-		std::invoke(f, Args...);
+		// 解析函数的参数类型
+	/*	std::cout << "RTTIFuncType_s return std::decay" << std::is_same<int, std::decay<FunctionTraits<decltype(f)>::args<0>::functionType>::type>::value << std::endl;
+
+
+		int n = FunctionTraits<decltype(f)>::arity;
+		for (int i = 0; i < n; ++i)
+		{
+			std::cout << "RTTIFuncType_s args std::decay " << std::is_same<int, std::decay<FunctionTraits<decltype(f)>::args<i>::type>::type>::value << std::endl;
+			std::cout << "RTTIFuncType_s args std::decay " << std::is_same<std::string, FunctionTraits<decltype(f)>::args<i>::type>::value << std::endl;
+		}*/
 	}
 
-private:
-
-	//template<class ___RT>
-	//void InnerInvoke(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	int nIndex = 0;
-	//	res.AddString(TypeToString(((*f)(ARGS1(pKernel, args, nIndex)))).c_str());
+	//void Invoke(Args...)
+	//{
+	//	std::invoke(f, Args...);
 	//}
-
-	//template<>
-	//void InnerInvoke<void>(_KERNEL* pKernel, const IVarList& args, IVarList& res) {
-	//	int nIndex = 0;
-	//	(*f)(ARGS1(pKernel, args, nIndex));
-	//	res.AddString("void");
-	//}
-
 };
 
 // 类成员函数
@@ -115,8 +107,7 @@ private:
 	typedef std::map<std::string, MethodType*> MapMethod;
 	static MapMethod m_mapMethod;
 public:
-	template<typename... Args>
-	static bool Invoke(const char* szFuncName, const Args& ...)
+	static bool Invoke(const char* szFuncName, const VEC_STRING&& vecArgs)
 	{
 		if (szFuncName == nullptr)
 		{
@@ -135,7 +126,8 @@ public:
 			return false;
 		}
 
-		pMethod->Invoke();
+		pMethod->Invoke(vecArgs);
+
 		return true;
 	}
 
@@ -196,7 +188,7 @@ public:
 		for (MapMethod::iterator iter = m_mapMethod.begin(); iter != m_mapMethod.end();)
 		{
 			MethodType* pMethod = iter->second;
-			if (pMethod != NULL && !pMethod->IsStatic() && pMethod->GetObj() == pObj)
+			if (pMethod != NULL && pMethod->GetObj() == pObj)
 			{
 				if (iter->second != nullptr)
 				{
