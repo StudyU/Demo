@@ -1,7 +1,7 @@
 #include <iostream>
 #include <climits>
 #include <string>
-
+#include <windows.h>
 using namespace std;
 
 // 4个int压缩成一个int (-128  -- 127 之前的数值)
@@ -26,8 +26,25 @@ int util_compress_int2(int iHighValue, int iLowValue)
 	return Value;
 }
 
+class NFGUID
+{
+public:
+	uint64_t data1 = 0;
+	uint64_t data2 = 0;
+};
+
 int main()
 {
+	NFGUID g1;
+	_GUID*gg = (_GUID*)&g1;
+	_GUID ggg;
+	HRESULT hs = CoCreateGuid((_GUID*)&g1);
+	HRESULT hs1 = CoCreateGuid(&ggg);
+	if (hs != S_OK || hs1 != S_OK)
+	{
+		return 0;
+	}
+
 		//stdint.h 
 	cout << "int is:" << sizeof(int) << " MaxNum is:" << INT_MAX << endl;
 	cout << "short is:" << sizeof(short) << " MaxNum is:" << SHRT_MAX << endl;

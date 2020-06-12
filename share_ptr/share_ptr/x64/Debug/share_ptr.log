@@ -1,3 +1,4 @@
 ﻿  stare_ptr.cpp
-  share_ptr.vcxproj -> F:\C++\TestCode\x64\Debug\share_ptr.exe
-  share_ptr.vcxproj -> F:\C++\TestCode\x64\Debug\share_ptr.pdb (Partial PDB)
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
+stare_ptr.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:REF”规范)
+  share_ptr.vcxproj -> D:\GitHub\Demo\share_ptr\x64\Debug\share_ptr.exe

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "F:\C++\Dll\Math\Math.h"
+#include "..\Math\Math.h"
 
 //__declspec(dllimport) double Sub(double a, double b);
 

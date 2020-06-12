@@ -23,6 +23,11 @@ int main()
 	//cout << "Your List:\n";
 	//display(list, SIZE);
 
+	std::string ss = "And";
+	std::string& sd = ss;
+	const char* sz = sd.c_str();
+	int jjd = std::atoi(sz);
+
 	char buff[32];
 	int nCnt = SafeSprint(buff, 32, "%s", "ngjuhfiusfifgahdfagawiuehwogdaidasdaaashdasu");
 
