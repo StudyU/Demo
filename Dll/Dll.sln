@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dll", "Dll\Dll.vcxproj", "{D7F98038-7F17-413F-8152-20587D3F8CEE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Math", "Math\Math.vcxproj", "{AF8EB730-8E6F-4A67-8D31-5846D8E6C2CC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dll_1", "Dll_1\Dll_1.vcxproj", "{E013D0E5-BA78-4289-82B2-0B7C7AF3899F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,8 +33,19 @@ Global
 		{AF8EB730-8E6F-4A67-8D31-5846D8E6C2CC}.Release|x64.Build.0 = Release|x64
 		{AF8EB730-8E6F-4A67-8D31-5846D8E6C2CC}.Release|x86.ActiveCfg = Release|Win32
 		{AF8EB730-8E6F-4A67-8D31-5846D8E6C2CC}.Release|x86.Build.0 = Release|Win32
+		{E013D0E5-BA78-4289-82B2-0B7C7AF3899F}.Debug|x64.ActiveCfg = Debug|x64
+		{E013D0E5-BA78-4289-82B2-0B7C7AF3899F}.Debug|x64.Build.0 = Debug|x64
+		{E013D0E5-BA78-4289-82B2-0B7C7AF3899F}.Debug|x86.ActiveCfg = Debug|Win32
+		{E013D0E5-BA78-4289-82B2-0B7C7AF3899F}.Debug|x86.Build.0 = Debug|Win32
+		{E013D0E5-BA78-4289-82B2-0B7C7AF3899F}.Release|x64.ActiveCfg = Release|x64
+		{E013D0E5-BA78-4289-82B2-0B7C7AF3899F}.Release|x64.Build.0 = Release|x64
+		{E013D0E5-BA78-4289-82B2-0B7C7AF3899F}.Release|x86.ActiveCfg = Release|Win32
+		{E013D0E5-BA78-4289-82B2-0B7C7AF3899F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25A0C7D5-178C-4AE8-945C-87ECD95F7D37}
 	EndGlobalSection
 EndGlobal

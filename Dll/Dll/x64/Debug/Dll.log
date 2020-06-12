@@ -1,3 +1,4 @@
 ﻿  TestMath.cpp
-  Dll.vcxproj -> F:\C++\Dll\x64\Debug\Dll.exe
-  Dll.vcxproj -> F:\C++\Dll\x64\Debug\Dll.pdb (Partial PDB)
+LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
+TestMath.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:REF”规范)
+  Dll.vcxproj -> D:\GitHub\Demo\Dll\x64\Debug\Dll.exe

@@ -1,2 +1,5 @@
-﻿  Math.cpp
-  Math.vcxproj -> F:\C++\Dll\x64\Debug\Math.dll
+﻿  dllmain.cpp
+  Math.cpp
+  正在生成代码...
+    正在创建库 D:\GitHub\Demo\Dll\x64\Debug\Math.lib 和对象 D:\GitHub\Demo\Dll\x64\Debug\Math.exp
+  Math.vcxproj -> D:\GitHub\Demo\Dll\x64\Debug\Math.dll
